@@ -13,8 +13,7 @@ export default function Detail(){
     const route = useRoute();
 
     const incident = route.params.incident;
-    const msg = 'Olá, estou entrando em contato pois gostaria de ajuda no caso "Cadelinha atropelada com o valor de R$ 120,00'
-
+    
     function navigateBack(){
         navigation.navigate('Incidents')
     }
@@ -28,7 +27,7 @@ export default function Detail(){
     }
 
     function sendWhatsapp(){
-        Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${msg}`)
+        Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${incident.description}`)
     }
 
     return(

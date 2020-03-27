@@ -1,6 +1,11 @@
 const connection = require('../database/connection')
 
 module.exports = {
+    /* 
+     * Método que faz a validação de logon
+     * Porém é feito de uma forma não muito segura 
+     * Então é preciso implementar uma forma de autenticação mais robusta, algo como JWT
+    */
     async create(request, response){
         const { id } = request.body;
 
