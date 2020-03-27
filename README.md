@@ -8,4 +8,4 @@ Plataforma mobile criada com React Native usando o Expo
 
 Plataforma web criada com reactJS no front-end, express no back-end e banco de dados SQLite, usando a estrutura de teste Jest para os testes automatizados.
 
-**App ainda em desenvolvimento, então não possui muitas funcionalidades ainda.
+**App em desenvolvimento, então não possui muitas funcionalidades ainda.
