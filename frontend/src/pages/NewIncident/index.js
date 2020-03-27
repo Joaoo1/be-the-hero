@@ -14,9 +14,11 @@ export default function NewIncident(){
 
     const ongId = localStorage.getItem('ongId')
     const history = useHistory();
-
+    
+    //Lida com requisição de um novo caso
     async function handleNewIncident(e){
         e.preventDefault();
+
         const data = {
             title,
             description,
@@ -29,12 +31,13 @@ export default function NewIncident(){
                     Authorization: ongId,
                 }
             })
-
+            //Retorna para a tela principal em caso de sucesso
             history.push('/profile')
         }catch(err){
             alert('Erro ao cadastrar caso, tente novamente')
         }
     }
+
     return (
         <div className="new-incident-container">
             <div className="content">

@@ -1,6 +1,8 @@
 const connection = require('../database/connection')
 
 module.exports = {
+
+    //Método que lista todos os casos de uma ONG
     async index(request, response){
         const ong_id = request.headers.authorization;
         const incidents = await connection('incidents')

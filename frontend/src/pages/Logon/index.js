@@ -11,16 +11,21 @@ import heroesImg from '../../assets/heroes.png';
 function Logon(){
     const [id, setId] = useState('');
     const history = useHistory();
-
+    
+    //Funcão que faz a requisição de logon no backend
     async function handleLogin(e){
         e.preventDefault();
 
         try{
             const response = await api.post('sessions', { id });
-
+            /*
+             * Armazena os dados de logon localmente no browser
+             * Esse dados não possui data de expiração e não são excluidos ao fechar o browser
+            */
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
 
+            //Em caso de sucesso, envia o usuario para a tela principal 
             history.push('/profile')
         }catch(err){
             alert('Falha no login, tente novamente')
@@ -32,7 +37,6 @@ function Logon(){
                 <img src={logoImg} alt="Be the hero" />
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
-
                     <input 
                         placeholder="Sua iD"
                         value={id}

@@ -1,6 +1,7 @@
 const knex = require('knex');
-const config = require('../../knexfile');
+const configuration = require('../../knexfile');
 
-const connection = knex(config.development);
+//Testa a variavel ambiente que indica se é um teste, para saber se deve usar o BD de testes
+const config = process.env.NODE_ENV === 'test' ? configuration.test : configuration.development;
 
-module.exports = connection;
+module.exports = knex(config);
