@@ -105,3 +105,13 @@ $ expo start
 **Instrutor: [Diego Fernandes](https://github.com/diego3g) | CTO Rocketseat**
 
 **&copy; [Rocketseat](https://rocketseat.com.br/)**
+
+## Demo
+
+![Alt text](/demo/print-home.png "Página inicial")
+![Alt text](/demo/print-cadaster-ong.png "Cadastro ONG")
+![Alt text](/demo/print-list-cases.png "Listar casos")
+![Alt text](/demo/print-cadaster-case.png "Cadastrar casos")
+![Alt text](/demo/print-mobile-cases.png "Listar casos - mobile")
+![Alt text](/demo/print-mobile-splash.png "Tela splash - mobile")
+
